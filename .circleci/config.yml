@@ -23,22 +23,11 @@ jobs:
                     # is found
                     - v1-dependencies-
 
-            #- run: composer install -n --prefer-dist
-            - run: make install
+            - run: composer install -n --prefer-dist
 
             - save_cache:
                 paths:
                     - ./vendor
                 key: v1-dependencies-{{ checksum "composer.json" }}
 
-            - run: make check
-            - run: make test
-
-
-
-# notify:
-#     webhooks:
-#         # canax
-#         - url: https://webhooks.gitter.im/e/c8ff44f50de935adf880
-#         # canax/commons
-#         - url: https://webhooks.gitter.im/e/7a5e4ea6070af520503c
+            - run: phpunit --configuration .phpuntil.xml
