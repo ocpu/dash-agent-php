@@ -18,8 +18,6 @@ class CURLBulk implements IRequestBrokerMulti
 
     public function exec()
     {
-        $flag = null;
-        $code = null;
         $index = null;
         do {
             curl_multi_exec($this->request, $index);

@@ -138,8 +138,9 @@ class RequestBuilder
 
     public function send()
     {
-        if (!($this->requester instanceof IRequestBrokerMulti))
+        if (!($this->requester instanceof IRequestBrokerMulti)) {
             $this->preSend();
+        }
 
         $res = $this->requester->exec();
         $this->requester->close();
