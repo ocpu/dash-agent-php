@@ -1,5 +1,5 @@
 {
-    "name": "ocpu/dash-agent-php",
+    "name": "ocpu/dash-agent",
     "description": "Making requests easy",
     "type": "library",
     "license": "MIT",
