@@ -30,4 +30,4 @@ jobs:
                     - ./vendor
                 key: v1-dependencies-{{ checksum "composer.json" }}
 
-            - run: phpunit --configuration .phpuntil.xml
+            - run: vendor/.bin/phpunit --configuration .phpuntil.xml
